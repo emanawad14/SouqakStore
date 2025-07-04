@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+
+:root
+{
+    --font-main:"Inter", sans-serif;
+   --font-second:"Poppins", sans-serif;
+   --Text-Color:#FAFAFA;
+   --primary-color:#DB4444;
+   --secondary-color:#000000;
+   --Rating-Color:#FFAD33;
+   --bg-input-color:#F5F5F5;
+   --Dark-gray:#2F2E30;
+   --green:#00FF66;
+}
