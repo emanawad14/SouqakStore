@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
+import { FlowbiteService } from './shared/services/flowbite/flowbite.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,16 @@ import { initFlowbite } from 'flowbite';
 export class AppComponent  implements OnInit{
   title = 'SouqakStore';
 
+  constructor(private _FlowbiteService:FlowbiteService){}
 
  
 
   ngOnInit(): void {
-    initFlowbite();
+    this._FlowbiteService.loadFlowbite(flowbite=>
+    {
+      console.log('flowbiteLoaded' ,flowbite);
+      
+    }
+    )
   }
 }
