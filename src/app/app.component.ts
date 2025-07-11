@@ -2,10 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { FlowbiteService } from './shared/services/flowbite/flowbite.service';
+import { NavComponent } from "./core/layouts/nav/nav.component";
+import { FooterComponent } from "./core/layouts/footer/footer.component";
+import { FootnavComponent } from "./core/layouts/footnav/footnav.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavComponent, FooterComponent, FootnavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
