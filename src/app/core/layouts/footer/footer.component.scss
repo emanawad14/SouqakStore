@@ -1,0 +1,11 @@
+:host {
+  a {
+    @apply hover:underline;
+  }
+
+  form {
+    input {
+      @apply placeholder-gray-400;
+    }
+  }
+}
