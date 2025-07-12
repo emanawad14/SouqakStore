@@ -9,6 +9,8 @@
 @source "../node_modules/flowbite";
 
 
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 :root
 {
     --font-main:"Inter", sans-serif;
@@ -19,5 +21,6 @@
    --Rating-Color:#FFAD33;
    --bg-input-color:#F5F5F5;
    --Dark-gray:#2F2E30;
+   --icon-Color: #7D8184;
    --green:#00FF66;
 }
