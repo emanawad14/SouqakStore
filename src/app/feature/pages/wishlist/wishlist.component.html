@@ -1,0 +1,95 @@
+<div class="flex  justify-between items-center p-2 mb-6">
+    <h3 class="ms-3">WishList (4)</h3>
+    <button class="border border-1 border-[##00000080] p-2 px-10 rounded-[5px]">Move All To Tag</button>
+
+</div>
+
+
+<div class="mb-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 gap-6">
+      
+        @for (item of wishList.slice(0, 4); track $index) {
+    <div class=" relative p-2 rounded-lg ">
+      <img  [src]="item.image_url"
+           alt="{{ item.title }}"
+           class="w-full h-48 object-cover  rounded-md p-6 bg-[#F5F5F5]" />
+          <i class="fa-solid fa-trash absolute top-3 right-4"></i>
+
+           <h2 class="bg-black text-white py-2 text-center w-full rounded-md cursor-pointer">
+        <i class="fa-solid fa-cart-plus"></i>
+           Add To Cart
+         </h2>
+
+      
+           <div>
+            <h2 class="text-lg font-semibold text-gray-800">{{ item.title.split(' ',2).join('') }}</h2>
+            <h2>220$</h2>
+           </div>
+    </div>
+      
+        }
+
+ 
+
+
+    </div>
+
+</div>
+
+ 
+
+<div class="flex justify-between items-center mb-10">
+    <h1 class="ms-3 text-[30px] text-red-500 font-bold">Just For You</h1>
+<button class="border border-1 border-[##00000080] p-2 px-10 rounded-[5px]">See All</button>
+
+
+</div>
+
+
+<div class="mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 gap-6">
+      
+        @for (item of wishList.slice(0, 4); track $index) {
+    <div class="p-2 rounded-lg relative  ">
+
+  
+  <img
+    [src]="item.image_url"
+    alt="{{ item.title }}"
+    class="w-full h-48 object-cover rounded-md bg-[#F5F5F5] p-6"
+  />
+  <i class="fa-solid fa-eye absolute top-3 right-4"></i>
+
+  
+  <h2 class="bg-black text-white py-2 text-center w-full rounded-md cursor-pointer">
+    <i class="fa-solid fa-cart-plus"></i>
+    Add To Cart
+  </h2>
+
+ 
+  <div class="mt-4">
+    <h2 class="text-lg font-semibold text-gray-800">
+      {{ item.title.split(' ',2).join(' ') }}
+    </h2>
+    <h2 class="text-gray-700 font-semibold">220$</h2>
+
+    <div class="text-[#FFAD33] flex items-center gap-2 mt-1">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <h2 class="text-black">(65)</h2>
+    </div>
+  </div>
+</div>
+
+      
+        }
+
+ 
+
+
+    </div>
+
+</div>
