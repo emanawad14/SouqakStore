@@ -1,0 +1,61 @@
+<ul class="flex ms-5 p-3 text-gray-500">
+  <li class="hover:text-black cursor-pointer">Home</li>
+  <li class="mx-2">/</li>
+  <li class="text-black font-medium">Cart</li>
+</ul>
+
+
+
+<div class="container mx-auto  px-4 mt-10 mb-10 max-w-screen-xl">
+  
+  <div class="overflow-x-auto shadow-sm rounded-lg">
+    <table class="table-auto w-full text-left border border-gray-200">
+      <thead class="bg-gray-100 text-gray-700">
+        <tr>
+          <th class="p-4">Product</th>
+          <th class="p-4">Price</th>
+          <th class="p-4">Quantity</th>
+          <th class="p-4">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cart">
+          <td class="p-4 flex items-center gap-3">
+            <img [src]="item.image" class="w-12 h-12" />
+            <span>{{ item.name }}</span>
+          </td>
+          <td class="p-4">${{ item.price }}</td>
+          <td class="p-4">
+            <select class="border rounded px-2 py-1">
+              <option *ngFor="let i of [1,2,3,4,5]" [value]="i">{{ i }}</option>
+            </select>
+          </td>
+          <td class="p-4">${{ item.price * item.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flex flex-wrap justify-between mt-6 gap-4">
+    <button class="border border-gray-700 px-4 py-2">Return To Shop</button>
+    <button class="border border-gray-700 px-4 py-2">Update Cart</button>
+  </div>
+
+  <div class="flex items-center flex-wrap justify-between mt-10 gap-8">
+    <div class="flex gap-3">
+    <button class="bg-white px-12 p-2 rounded-[6px] text-start text-[#000000] border border-[#000000] border-1">Coupon Code</button>
+      <button class="bg-red-500 px-6 p-2 rounded-[6px] text-white">Apply Coupon</button>
+    </div>
+
+    <div class="border  p-6 min-w-[400px]  border border-[#000000] border-1">
+      <h3 class="text-lg font-bold mb-4">Cart Total</h3>
+      <p>Subtotal: <span class="float-right">${{ total }}</span></p>
+       <hr class="my-3">
+      <p>Shipping: <span class="float-right">Free</span></p>
+      <hr class="my-3">
+      <p>Total: <span class="float-right font-bold">${{ total }}</span></p>
+
+      <button class="bg-red-500 text-white w-full rounded-[10px] py-2 mt-4">Proceed to checkout</button>
+    </div>
+  </div>
+</div>
