@@ -9,7 +9,7 @@
 <div class="container mx-auto  px-4 mt-10 mb-10 max-w-screen-xl">
   
   <div class="overflow-x-auto shadow-sm rounded-lg">
-    <table class="table-auto w-full text-left border border-gray-200">
+    <table class="table-auto w-full text-left border ">
       <thead class="bg-gray-100 text-gray-700">
         <tr>
           <th class="p-4">Product</th>
@@ -18,20 +18,30 @@
           <th class="p-4">Subtotal</th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let item of cart">
+      <tbody class="bg-black my-10">
+        <tr>
           <td class="p-4 flex items-center gap-3">
-            <img [src]="item.image" class="w-12 h-12" />
-            <span>{{ item.name }}</span>
+            <img src="/images/fcc89aaa7b85f8c1dcce81e71e2eb178be13bd4d.jpg"
+            class="w-12 h-12"
+            alt="">
+              <span class="text-white"> Hello</span>
+
           </td>
-          <td class="p-4">${{ item.price }}</td>
+
+          <td class="p-4 text-white">22$</td>
           <td class="p-4">
             <select class="border rounded px-2 py-1">
-              <option *ngFor="let i of [1,2,3,4,5]" [value]="i">{{ i }}</option>
+              <option
+                [value]="">
+              
+              </option>
             </select>
           </td>
-          <td class="p-4">${{ item.price * item.quantity }}</td>
+          <td class="p-4 text-white">3</td>
+
         </tr>
+      
+        
       </tbody>
     </table>
   </div>
